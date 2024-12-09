@@ -5,34 +5,36 @@ Employment scams are on the rise. According to CNBC, the number of employment sc
 
 This project uses data provided from Kaggle. This data contains features that define a job posting. These job postings are categorized as either real or fake. Fake job postings are a very small fraction of this dataset. That is as excepted. We do not expect a lot of fake jobs postings. This project follows five stages. The five stages adopted for this project are –
 
-Problem Definition (Project Overview, Project statement and Metrics)
-Data Collection
-Data cleaning, exploring and pre-processing
-Modeling
-Evaluating
-Stages of Development
+1. Problem Definition (Project Overview, Project statement and Metrics)
+2. Data Collection
+3. Data cleaning, exploring and pre-processing
+4. Modeling
+5. Evaluating
 
-Problem Statement
+
+# Problem Statement
+
 This project aims to create a classifier that will have the capability to identify fake and real jobs. The final result will be evaluated based on two different models. Since the data provided has both numeric and text features one model will be used on the text data and the other on numeric data. The final output will be a combination of the two. The final model will take in any relevant job posting data and produce a final result determining whether the job is real or not.
 
-This project uses data from Kaggle.
 
-Metrics
+
+# Metrics
 The models will be evaluated based on two metrics:
 
-Accuracy: This metric is defined by this formula -
-equation
+1. Accuracy: This metric is defined by this formula -
+
+ACCURARCY = TP+TN/TP+FP+TN+FN
 
 As the formula suggests, this metric produces a ratio of all correctly categorized data points to all data points. This is particularly useful since we are trying to identify both real and fake jobs unlike a scenario where only one category is important. There is however one drawback to this metric. Machine learning algorithms tend to favor dominant classes. Since our classes are highly unbalanced a high accuracy would only be a representative of how well our model is categorizing the negative class (real jobs).
 
-F1-Score: F1 score is a measure of a model’s accuracy on a dataset. The formula for this metric is –
-equation
+2. F1-Score: F1 score is a measure of a model’s accuracy on a dataset. The formula for this metric is –
+   
+F-score = 2 * (precision * recall) / (precision + recall)
 
 F1-score is used because in this scenario both false negatives and false positives are crucial. This model needs to identify both categories with the highest possible score since both have high costs associated to it.
 
-Analysis
+# Analysis
 Data Exploration
-The data for this project is available at Kaggle - https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction. The dataset consists of 17,880 observations and 18 features.
 
 The data is combination of integer, binary and textual datatypes. A brief definition of the variables is given below:
 
